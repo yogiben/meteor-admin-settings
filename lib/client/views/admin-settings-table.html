@@ -1,0 +1,23 @@
+<template name="adminSettingsTable">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Value</th>
+				<th>Edit</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each adminSettings}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{value}}</td>
+				<td>
+					<a href="{{pathFor 'adminSettingsEdit' _id=_id}}" class="hidden-xs btn btn-xs btn-primary"><i class="fa fa-pencil"></i></a>
+					<a href="{{pathFor 'adminSettingsEdit' _id=_id}}" class="visible-xs btn btn-sm btn-primary"><i class="fa fa-pencil"></i> Edit</a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>
