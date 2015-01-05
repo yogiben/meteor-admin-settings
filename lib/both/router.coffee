@@ -1,7 +1,7 @@
 Meteor.startup ->
 	Router.route 'adminSettings',
 		path: AdminDashboard.path('settings')
-		layoutTemplate: 'AdminLayout'
+		controller: 'AdminController'
 		onAfterAction: ->
 			Session.set 'admin_title', 'Settings'
 			Session.set 'admin_subtitle', 'View'
@@ -10,14 +10,14 @@ Meteor.startup ->
 	# TODO: investigate why '/settings/new' path is not working
 	Router.route 'adminSettingsNew',
 		path: AdminDashboard.path('settings/create')
-		layoutTemplate: 'AdminLayout'
+		controller: 'AdminController'
 		onAfterAction: ->
 			Session.set 'admin_title', 'Settings'
 			Session.set 'admin_subtitle', 'New'
 
 	Router.route 'adminSettingsEdit',
 		path: AdminDashboard.path('settings/:_id'),
-		layoutTemplate: 'AdminLayout'
+		controller: 'AdminController'
 		data: ->
 			_id: @params._id
 		onAfterAction: ->
