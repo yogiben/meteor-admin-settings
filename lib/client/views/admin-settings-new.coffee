@@ -20,6 +20,5 @@ Template.AdminSettingsNew.events
 
 AutoForm.hooks
 	adminSettingsNew:
-		after:
-			insert: ->
-				Router.go 'adminSettings'
+		onSuccess: ->
+			Router.go 'adminSettings'

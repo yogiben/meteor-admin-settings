@@ -12,6 +12,5 @@ Template.adminSettingsEdit.helpers
 
 AutoForm.hooks
 	adminSettingsEdit:
-		after:
-			update: ->
-				Router.go 'adminSettings'
+		onSuccess: ->
+			Router.go 'adminSettings'

@@ -19,22 +19,28 @@ Package.onUse(function(api) {
   ], both);
 
   api.addFiles([
-  	'lib/client/views/admin-settings.html',
+    'lib/both/collections.coffee',
+  	'lib/both/router.coffee',
+    'lib/both/types.coffee'
+  ], both);
+  
+  api.addFiles([
+    'lib/client/views/admin-settings.html',
     'lib/client/views/admin-settings-table.html',
     'lib/client/views/admin-settings-edit.html',
     'lib/client/views/admin-settings-new.html',
     'lib/client/views/admin-settings-edit.coffee',
     'lib/client/views/admin-settings-new.coffee',
-  	'lib/client/admin.coffee',
+    'lib/client/admin.coffee',
     'lib/client/tracker.coffee',
     'lib/client/helpers.coffee'
   ], 'client');
 
   api.addFiles([
-    'lib/both/collections.coffee',
-  	'lib/both/router.coffee',
-    'lib/both/types.coffee'
-  ], both);
+    'lib/server/allow.coffee',
+    'lib/server/publish.coffee'
+  ], 'server');
+
 });
 
 Package.onTest(function(api) {
