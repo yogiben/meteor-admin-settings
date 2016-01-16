@@ -7,5 +7,4 @@ Tinytest.add('yogiben:admin-settings - test environment', function (test) {
     typeof AdminSettingsTypes !== 'undefined',
     'test environment not initialized AdminSettingsTypes'
   );
-
 });
