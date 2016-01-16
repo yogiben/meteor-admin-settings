@@ -5,6 +5,7 @@ Package.describe({
   git: 'https://github.com/yogiben/meteor-admin-settings'
 });
 
+
 Package.onUse(function (api) {
   api.versionsFrom('1.0.1');
 
@@ -13,8 +14,8 @@ Package.onUse(function (api) {
     'underscore',
     'templating',
     'tracker',
-    'iron:router@1.0.3',
-    'aldeed:autoform@4.2.1'
+    'iron:router@1.0.9',
+    'aldeed:autoform@5.5.1'
   ]);
 
   api.addFiles([
@@ -41,8 +42,11 @@ Package.onUse(function (api) {
   ], 'server');
 });
 
+
 Package.onTest(function (api) {
-  api.use('tinytest');
-  api.use('yogiben:admin-settings');
+  api.use([
+    'tinytest',
+    'yogiben:admin-settings'
+  ]);
   api.addFiles('yogiben:admin-settings-tests.js');
 });
