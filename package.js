@@ -13,7 +13,6 @@ Package.onUse(function (api) {
     'coffeescript',
     'underscore',
     'templating',
-    'tracker',
     'iron:router@1.0.9',
     'aldeed:autoform@5.5.1'
   ]);
@@ -32,7 +31,6 @@ Package.onUse(function (api) {
     'lib/client/views/admin-settings-edit.coffee',
     'lib/client/views/admin-settings-new.coffee',
     'lib/client/admin.coffee',
-    'lib/client/tracker.coffee',
     'lib/client/helpers.coffee'
   ], 'client');
 
