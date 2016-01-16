@@ -1,7 +1,7 @@
 Package.describe({
   name: 'yogiben:admin-settings',
   summary: 'Key value store for yogiben:admin',
-  version: '1.0.0',
+  version: '1.1.0',
   git: 'https://github.com/yogiben/meteor-admin-settings'
 });
 
