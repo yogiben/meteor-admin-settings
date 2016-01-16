@@ -19,11 +19,11 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/both/collections.coffee',
-    'lib/both/router.coffee',
     'lib/both/types.coffee'
   ]);
 
   api.addFiles([
+    'lib/client/router.coffee',
     'lib/client/views/admin-settings.html',
     'lib/client/views/admin-settings-table.html',
     'lib/client/views/admin-settings-edit.html',
