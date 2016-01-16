@@ -1,28 +1,32 @@
 <template name="adminSettingsTable">
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Value</th>
-				<th>Edit</th>
-				<th>Delete</th>
-			</tr>
-		</thead>
-		<tbody>
-			{{#each adminSettings}}
-			<tr>
-				<td>{{name}}</td>
-				<td>{{value}}</td>
-				<td>
-					<a href="{{pathFor 'adminSettingsEdit' _id=_id}}" class="hidden-xs btn btn-xs btn-primary"><i class="fa fa-pencil"></i></a>
-					<a href="{{pathFor 'adminSettingsEdit' _id=_id}}" class="visible-xs btn btn-sm btn-primary"><i class="fa fa-pencil"></i> Edit</a>
-				</td>
-				<td>
-					<a data-toggle="modal" doc="{{_id}}" href='#admin-delete-modal' class="hidden-xs btn btn-xs btn-danger btn-delete"><i class="fa fa-times" doc="{{_id}}"></i></a>
-					<a data-toggle="modal" doc="{{_id}}" href='#admin-delete-modal' class="visible-xs btn btn-sm btn-danger btn-delete"><i class="fa fa-times" doc="{{_id}}"></i> Delete</a>
-				</td>
-			</tr>
-			{{/each}}
-		</tbody>
-	</table>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each adminSettings}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{value}}</td>
+        <td>
+          <a href="{{pathFor 'adminSettingsEdit' _id=_id}}" class="hidden-xs btn btn-xs btn-primary"><i
+              class="fa fa-pencil"></i></a>
+          <a href="{{pathFor 'adminSettingsEdit' _id=_id}}" class="visible-xs btn btn-sm btn-primary"><i
+              class="fa fa-pencil"></i> Edit</a>
+        </td>
+        <td>
+          <a data-toggle="modal" doc="{{_id}}" href='#admin-delete-modal'
+             class="hidden-xs btn btn-xs btn-danger btn-delete"><i class="fa fa-times" doc="{{_id}}"></i></a>
+          <a data-toggle="modal" doc="{{_id}}" href='#admin-delete-modal'
+             class="visible-xs btn btn-sm btn-danger btn-delete"><i class="fa fa-times" doc="{{_id}}"></i> Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
 </template>

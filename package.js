@@ -5,8 +5,7 @@ Package.describe({
   git: 'https://github.com/yogiben/meteor-admin-settings'
 });
 
-Package.onUse(function(api) {
-  var both = ['client', 'server'];
+Package.onUse(function (api) {
   api.versionsFrom('1.0.1');
 
   api.use([
@@ -15,15 +14,15 @@ Package.onUse(function(api) {
     'templating',
     'tracker',
     'iron:router@1.0.3',
-    'aldeed:autoform@4.2.1',
-  ], both);
+    'aldeed:autoform@4.2.1'
+  ]);
 
   api.addFiles([
     'lib/both/collections.coffee',
-  	'lib/both/router.coffee',
+    'lib/both/router.coffee',
     'lib/both/types.coffee'
-  ], both);
-  
+  ]);
+
   api.addFiles([
     'lib/client/views/admin-settings.html',
     'lib/client/views/admin-settings-table.html',
@@ -40,10 +39,9 @@ Package.onUse(function(api) {
     'lib/server/allow.coffee',
     'lib/server/publish.coffee'
   ], 'server');
-
 });
 
-Package.onTest(function(api) {
+Package.onTest(function (api) {
   api.use('tinytest');
   api.use('yogiben:admin-settings');
   api.addFiles('yogiben:admin-settings-tests.js');

@@ -1,2 +1,2 @@
 Meteor.publish 'adminSettings', ->
-	AdminSettings.find()
+  AdminSettings.find()

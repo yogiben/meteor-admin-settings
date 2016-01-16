@@ -1,8 +1,8 @@
 <template name="adminSettingsEdit">
-	{{#autoForm schema=schema collection="AdminSettings" doc=doc type="update" id="adminSettingsEdit"}}
-		{{> afQuickField name="value"}}
-		<div>
-			<button type="submit" class="btn btn-primary">Save</button>
-		</div>
-	{{/autoForm}}
+    {{#autoForm schema=schema collection="AdminSettings" doc=doc type="update" id="adminSettingsEdit"}}
+        {{> afQuickField name="value"}}
+      <div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    {{/autoForm}}
 </template>

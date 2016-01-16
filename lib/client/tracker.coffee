@@ -1,2 +1,2 @@
 Tracker.autorun ->
-	Meteor.subscribe 'adminSettings'
+  Meteor.subscribe 'adminSettings'
