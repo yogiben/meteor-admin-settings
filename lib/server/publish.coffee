@@ -1,2 +1,2 @@
-Meteor.publish 'adminSettings', ->
-	AdminSettings.find()
+Meteor.publish null, ->
+  AdminSettings.find()
